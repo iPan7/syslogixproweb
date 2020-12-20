@@ -58,17 +58,17 @@ export const Navbar = () => {
   return (
     <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+          <Typography id="title" variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             SYSLOGIXPRO
           </Typography>
           <nav>
-            <Button component={Link} to={'/About'} variant="button" color="textPrimary" href="#" className={classes.link}>
+            <Button id="about" component={Link} to={'/About'} variant="button" color="textPrimary" href="#" className={classes.link}>
               ABOUT
             </Button>
-            <Button component={Link} to={'/Pricing'} variant="button" color="textPrimary" className={classes.link}>
+            <Button id="pricing" component={Link} to={'/Pricing'} variant="button" color="textPrimary" className={classes.link}>
               PRICING
             </Button>
-            <Button component={Link} to={'/Contact'} variant="button" color="textPrimary" href="#" className={classes.link}>
+            <Button id="contact" component={Link} to={'/Contact'} variant="button" color="textPrimary" href="#" className={classes.link}>
               CONTACT
             </Button>
           </nav>
