@@ -3,8 +3,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import {Link} from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -54,11 +54,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const Navbar = () => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
@@ -67,15 +62,15 @@ export const Navbar = () => {
             SYSLOGIXPRO
           </Typography>
           <nav>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+            <Button component={Link} to={'/About'} variant="button" color="textPrimary" href="#" className={classes.link}>
               ABOUT
-            </Link>
-            <Link variant="button" color="textPrimary" href="./Pricing" className={classes.link}>
+            </Button>
+            <Button component={Link} to={'/Pricing'} variant="button" color="textPrimary" className={classes.link}>
               PRICING
-            </Link>
-            <Link variant="button" color="textPrimary" href="#" className={classes.link}>
+            </Button>
+            <Button component={Link} to={'/Contact'} variant="button" color="textPrimary" href="#" className={classes.link}>
               CONTACT
-            </Link>
+            </Button>
           </nav>
         </Toolbar>
       </AppBar>
