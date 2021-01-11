@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -24,6 +23,7 @@ function Copyright() {
   );
 }
 
+
 const useStyles = makeStyles((theme) => ({
   icon: {
     marginRight: theme.spacing(2),
@@ -36,13 +36,15 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    padding: theme.spacing(2),
   },
   card: {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    padding: theme.spacing(8),
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -56,8 +58,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 export default function About() {
   const classes = useStyles();
 
@@ -69,12 +69,12 @@ export default function About() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              Album layout
+              About Us
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-              entirely.
+            SYSLOGIXPRO (formally Syslogix Solutions LLC) is a full-services IT and information security consulting firm. As a collective, our background and expertise ranges from computer networking, cyber security, operating system support, programming, to machine learning.
+We have been joined together since 2016 in service by the common threads of technology, and our passion for helping people.
+We strongly believe in the values of honesty, integrity, and work quality. We keep positive and professional attitudes. We are always also students in all that we do. We love our field- for us it was a hobby long before we made it a profession. We love learning something new every day.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -94,9 +94,8 @@ export default function About() {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+          <Grid container spacing={16} justify="center">
+<Grid item md={4}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
@@ -108,21 +107,46 @@ export default function About() {
                       Heading
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the content.
+                      Test
                     </Typography>
                   </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
                 </Card>
-              </Grid>
-            ))}
-          </Grid>
+</Grid>
+<Grid item md={4}>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://imgur.com/a/wt0i37D"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      Test
+                    </Typography>
+                  </CardContent>
+                </Card>
+</Grid>
+<Grid item md={4}>             
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://imgur.com/a/wt0i37D"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      Test
+                    </Typography>
+                  </CardContent>
+                </Card>
+</Grid>
+</Grid>
         </Container>
       </main>
       {/* Footer */}
