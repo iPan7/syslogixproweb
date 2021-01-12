@@ -9,6 +9,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import Will from './Will.jpg';
+import Palmer from './Palmer.jpeg';
+import Carlos from './Carlos.jpeg';
 
 function Copyright() {
   return (
@@ -99,15 +102,15 @@ We strongly believe in the values of honesty, integrity, and work quality. We ke
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
+                    image={Carlos}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                    Carlos Enrique Melendez Jansen
                     </Typography>
                     <Typography>
-                      Test
+                    Sr. Systems Administrator
                     </Typography>
                   </CardContent>
                 </Card>
@@ -116,15 +119,16 @@ We strongly believe in the values of honesty, integrity, and work quality. We ke
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://imgur.com/a/wt0i37D"
+                    image={Palmer}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Andrew Palmer
                     </Typography>
                     <Typography>
-                      Test
+                    IT Security Manager (owner)
+Certifications: CISSP, CEH, Splunk Core User, Security+, Network+, A+, ITIL, Sophos XG 16.5
                     </Typography>
                   </CardContent>
                 </Card>
@@ -133,15 +137,15 @@ We strongly believe in the values of honesty, integrity, and work quality. We ke
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://imgur.com/a/wt0i37D"
+                    image={Will}
                     title="Image title"
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Will McGinnis
                     </Typography>
                     <Typography>
-                      Test
+                    Systems Architect
                     </Typography>
                   </CardContent>
                 </Card>
